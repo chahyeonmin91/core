@@ -8,7 +8,10 @@ import hello.core.member.MemberServiceImpl;
 public class MemberApp {
     public static void main(String[] args) {
         MemberService memberService = new MemberServiceImpl();
-        Member memberA = new Member(1L, "memberA", Grade.VIP);
+        Member member = new Member(1L, "member", Grade.VIP);
 
+        Member findMember = memberService.findMember(1L);
+        System.out.println("new member = " + member.getName());
+        System.out.println("find member = " + findMember.getName());
     }
 }
