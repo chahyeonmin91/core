@@ -13,8 +13,8 @@ public class OrderServiceImpl implements OrderService {
     private MemberRepository memberRepository;
     private DiscountPolicy discountPolicy;
 
-    @Autowired
-    private DiscountPolicy rateDiscountPolicy;
+//    @Autowired
+//    private DiscountPolicy rateDiscountPolicy;
 
     //생성자가 한개만 있다면 @Autowired 생략 가능
     @Autowired
@@ -22,18 +22,6 @@ public class OrderServiceImpl implements OrderService {
         this.memberRepository = memberRepository;
         this.discountPolicy = rateDiscountPolicy;
     }
-
-
-//    @Autowired
-//    public void setMemberRepository(MemberRepository memberRepository) {
-//        this.memberRepository = memberRepository;
-//    }
-
-//    @Autowired
-//    public void setDiscountPolicy(DiscountPolicy discountPolicy) {
-//        this.discountPolicy = discountPolicy;
-//    }
-
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
