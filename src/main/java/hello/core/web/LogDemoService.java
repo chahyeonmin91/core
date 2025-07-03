@@ -10,10 +10,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequiredArgsConstructor
 
 public class LogDemoService {
-    private final ObjectProvider<MyLogger> myLoggerProvider;
+//    private final ObjectProvider<MyLogger> myLoggerProvider;
+//
+//    public void logic(String id) {
+//        MyLogger myLogger = myLoggerProvider.getObject();
+//        myLogger.log("service id = " + id);
+//    }
 
+    private final MyLogger myLogger;
     public void logic(String id) {
-        MyLogger myLogger = myLoggerProvider.getObject();
         myLogger.log("service id = " + id);
     }
 }
